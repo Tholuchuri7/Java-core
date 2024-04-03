@@ -1,0 +1,120 @@
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
+
+public class sctpNewbusiness {
+
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver = new ChromeDriver();
+		JavascriptExecutor JS = (JavascriptExecutor) driver;
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+		driver.get(
+				"https://rc.steadfasthub.com/svu/brokers/QBEBROKER/login.aspx?ReturnUrl=%2fsvu%2fbrokers%2fQBEBROKER%2fModules%2fGIBroker%2fPublic%2fOpportunityGIPolicyAddEdit.aspx%3fcategory%3dGIPOL_NB&category=GIPOL_NB");
+		driver.findElement(By.cssSelector("#txtUsername")).sendKeys("Arulmozhi.sanmugam");
+		driver.findElement(By.cssSelector("#txtPassword")).sendKeys("Feb@20242024");
+		driver.findElement(By.cssSelector("#btnLogin")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'Switch Sites')]")).click();
+		driver.findElement(By.xpath("//tbody/tr[4]/td[3]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'Create New Business')]")).click();
+		driver.findElement(By.cssSelector("#ctl00_cntMainData_txtAccount")).sendKeys("Vasi1 [1615]");
+		driver.findElement(By.id("ctl00_cntMainData_ddlProduct")).click();
+		driver.findElement(By.id("ctl00_cntMainData_ddlProduct")).click();
+		driver.findElement(By.xpath("//option[@value='845a6305-a47e-4795-a544-3f589542158b']")).click();
+		driver.findElement(By.cssSelector("#ctl00_cntMainData_txtInceptionDate")).sendKeys("15/03/2024");
+		driver.findElement(By.id("ctl00_cntMainData_btnSave")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'Create Quote Request')]")).click();
+		driver.findElement(By.xpath("(//input[@type='checkbox'])[1]")).click();
+		driver.findElement(By.id("QuoteRqController_BrokerPhone")).sendKeys("11188999");
+		JS.executeScript("window.scrollBy(0,400)");
+		driver.findElement(By.xpath("(//option[@value='No'])[1]")).click();
+		// driver.findElement(By.id("QuoteRqController_CriminalConvictions")).click();
+		driver.findElement(By.cssSelector("select[id='QuoteRqController_CriminalConvictions'] option[value='1']"))
+				.click();
+		driver.findElement(By.xpath("//input[@placeholder='required']")).sendKeys("01/01/1980");
+		driver.findElement(By.xpath("//option[@data-value='Ace']")).click();
+		driver.findElement(By.id("QuoteRqController_next1_Anchor")).click();
+		driver.findElement(By.cssSelector("#QuoteRqHomeSummaryController_add1_Anchor")).click();
+		driver.findElement(By.cssSelector("select[id='QuoteRqHomeriskController_UsedForBusiness'] option[value='No']"))
+				.click();
+		driver.findElement(
+				By.cssSelector("select[id='QuoteRqHomeriskController_UnderConstruction'] option[value='No']")).click();
+		driver.findElement(By.cssSelector("select[id='QuoteRqHomeriskController_NotMaintained'] option[value='No']"))
+				.click();
+		driver.findElement(By.cssSelector("select[id='QuoteRqHomeriskController_Unoccupied'] option[value='No']"))
+				.click();
+		driver.findElement(By.cssSelector("select[id='QuoteRqHomeriskController_HeritageListed'] option[value='No']"))
+				.click();
+		driver.findElement(
+				By.cssSelector("select[id='QuoteRqHomeriskController_HotelAptGuesthouse'] option[value='No']")).click();
+		driver.findElement(By.cssSelector("select[id='QuoteRqHomeriskController_CommunityHousing'] option[value='No']"))
+				.click();
+		driver.findElement(
+				By.cssSelector("select[id='QuoteRqHomeriskController_LandExceeds2Hectares'] option[value='No']"))
+				.click();
+		driver.findElement(By.cssSelector("select[id$='QuoteRqHomeriskController_OccupancyType'] option[value='1']"))
+				.click();
+		driver.findElement(By.cssSelector("select[id$='QuoteRqHomeriskController_BuildingType'] option[value='1']"))
+				.click();
+		driver.findElement(By.cssSelector("select[id$='QuoteRqHomeriskController_BuiltOn'] option[value='1']")).click();
+		driver.findElement(By.cssSelector("select[id$='QuoteRqHomeriskController_CoverType'] option[value='1']"))
+				.click();
+		driver.findElement(By.id("QuoteRqHomeriskController_ManualAddress")).click();
+		driver.findElement(By.id("QuoteRqHomeriskController_HomeAddressLine1")).sendKeys("12 pitti street");
+		driver.findElement(By.id("QuoteRqHomeriskController_HomeAddressLine2")).sendKeys("street1");
+		driver.findElement(By.id("QuoteRqHomeriskController_HomeAddressCity")).sendKeys("sydney");
+		driver.findElement(
+				By.cssSelector("select[id='QuoteRqHomeriskController_ManualAddressState'] option[value='2']")).click();
+		driver.findElement(By.id("QuoteRqHomeriskController_HomeAddressPostCode")).sendKeys("2000");
+		driver.findElement(By.cssSelector("select[id$='QuoteRqHomeriskController_WallConstruction'] option[value='4']"))
+				.click();
+		driver.findElement(By.cssSelector("select[id$='QuoteRqHomeriskController_RoofConstruction'] option[value='3']"))
+				.click();
+		driver.findElement(
+				By.cssSelector("select[id$='QuoteRqHomeriskController_ConstructionPeriod'] option[value='3']")).click();
+		driver.findElement(By.cssSelector("select[id$='QuoteRqHomeriskController_Levels'] option[value='1']")).click();
+		driver.findElement(
+				By.cssSelector("select[id$='QuoteRqHomeriskController_ConstructionQuality'] option[value='2']"))
+				.click();
+		driver.findElement(By.id("QuoteRqHomeriskController_Beds")).sendKeys("1");
+		driver.findElement(By.id("QuoteRqHomeriskController_Baths")).sendKeys("1");
+		driver.findElement(By.id("QuoteRqHomeriskController_BuildingInsuredValue")).sendKeys("650000");
+		driver.findElement(By.cssSelector("select[id$='QuoteRqHomeriskController_DoorSecurity'] option[value='1']"))
+				.click();
+		driver.findElement(By.cssSelector("select[id$='QuoteRqHomeriskController_WindowSecurity'] option[value='1']"))
+				.click();
+		driver.findElement(By.cssSelector("select[id$='QuoteRqHomeriskController_AlarmSecurity'] option[value='1']"))
+				.click();
+		driver.findElement(By.id("QuoteRqHomeriskController_ContentsSumInsured")).sendKeys("100000");
+		driver.findElement(
+				By.cssSelector("select[id$='QuoteRqHomeriskController_interestedParties_1_name'] option[value='None']"))
+				.click();
+		driver.findElement(By.id("QuoteRqHomeriskController_next1_Anchor")).click();
+		driver.findElement(By.cssSelector("select[id='QuoteRqClaimsController_ContentsClaims'] option[value='No']"))
+				.click();
+		driver.findElement(By.id("QuoteRqClaimsController_send2_Anchor")).click();
+		Thread.sleep(7000);
+		String r = driver.findElement(By.cssSelector(".spnBusinessStatus_Quoted")).getText();
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0,500)");
+		Assert.assertEquals(r, "Quoted");
+		Actions action = new Actions(driver);
+		action.moveToElement(driver.findElement(By.id("_MessageRow1"))).build().perform();
+		driver.findElement(By.xpath("//li[contains(@id,'_MsgRowItem1_Bind')]")).click();
+		driver.findElement(By.xpath("//input[@id='1']")).click();
+		driver.findElement(By.id("BindRqController_send1_Anchor")).click();
+		String finalData = driver.findElement(By.cssSelector(".spnBusinessStatus_Closed")).getText();
+		String expecteddata = "Closed";
+		Assert.assertEquals(finalData, expecteddata);
+		Thread.sleep(5000);
+		driver.close();
+	}
+
+}
